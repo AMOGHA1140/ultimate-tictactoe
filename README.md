@@ -1,15 +1,11 @@
-### tictactoe.py 
-This file contains the basic logic for board representation and different operations on it. 
-It can be optimized with a bit representation of the board, which will be written and uploaded later
+Originally, I created the game in the folder `tictactoe`, but it was performing ~50 searches per second, which was far from optimal. I decided to change the way I was representing board and went with using bit-wise repesenation, which increased the searches to ~500 per second
 
-### runner.py
-Main file to run. this contains the pygame logic to display the game, allow 2 people to play against each other or play against AI
+Both folder contain the same structure of files, 
 
-### mcts.py 
-Contains the logic and implementation of Monte Carlo Search Tree. The code is extremely unoptimized, performing only about ~50 searches per second. this NEEDS to increase. 
-the code has to be able to perform atleast ~2500 per second to be viable to be used newly for each state
+`tictactoe.py` - Code around the structue of board and to perform operations on it, like getting legal actions possible, making a move etc
 
-Furthermore, new file has to be written to make use of past searched states, basically memoization. 
+`runner1.py` - The main file to run. it contains code written to display a pygame interface for the game, to play against another human or with AI
 
-### random_ai.py
-Performs random moves. not an AI tbh
+`mcts.py` - for performing Monte Carlo Tree Search. 
+
+`random_ai.py` - just performs a random move out of the available moves. not really an AI
